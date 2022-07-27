@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class TimerScript : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI timerText;
+    [SerializeField] private TMPro.TextMeshProUGUI timerText;
     private float timer = 0f;
 
     private void FixedUpdate() {
