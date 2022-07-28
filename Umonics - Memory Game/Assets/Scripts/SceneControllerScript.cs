@@ -89,6 +89,9 @@ public class SceneControllerScript : MonoBehaviour
     private IEnumerator CheckMatch(){
         if(_firstRevealed.id == _secondRevealed.id) {
             _score++;
+            if(_score==2){
+                Stop();
+            }
         }
         else {
             yield return new WaitForSeconds(0.5f);
@@ -105,6 +108,11 @@ public class SceneControllerScript : MonoBehaviour
         _secondRevealed = null;
     }
     
+    public TimerScript _timer;
+
+    public void Stop(){
+        _timer.Stop();
+    }
 
     //Game over script
     public GameOverScript _gameOver;
@@ -112,6 +120,7 @@ public class SceneControllerScript : MonoBehaviour
     public void GameOver() {
         
         _gameOver.RetryBackground();
+        Stop();
     }
     
 }
