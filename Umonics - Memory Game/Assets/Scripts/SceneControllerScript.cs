@@ -12,6 +12,7 @@ public class SceneControllerScript : MonoBehaviour
 
     [SerializeField] private MainCardScript originalCard;
     [SerializeField] private Sprite[] images;
+    
     // Get reduce lives
     LivesScript _livesScript;
     [SerializeField] GameObject Lives;
@@ -19,6 +20,7 @@ public class SceneControllerScript : MonoBehaviour
     void Awake() {
         _livesScript = Lives.GetComponent<LivesScript>();
     }
+
 
     private void Start() {
         Vector3 startPos = originalCard.transform.position; // position of first card
@@ -67,7 +69,7 @@ public class SceneControllerScript : MonoBehaviour
     private MainCardScript _secondRevealed;
 
     private int _score = 0;
-    private int _heart = 3;
+    private int _hearts = 3;
     [SerializeField] private TextMesh scoreLabel;
 
     public bool canReveal {
@@ -93,13 +95,23 @@ public class SceneControllerScript : MonoBehaviour
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
             _livesScript.ReduceLives();
-            
+            _hearts--;
+            if(_hearts == 0) {
+                GameOver();//Game over on 0 hearts
+            }
         }
-
         //so we can reuse
         _firstRevealed = null;
         _secondRevealed = null;
     }
     
 
+    //Game over script
+    public GameOverScript _gameOver;
+    
+    public void GameOver() {
+        
+        _gameOver.RetryBackground();
+    }
+    
 }
