@@ -4,7 +4,15 @@ public class LivesScript : MonoBehaviour
 {
     [SerializeField] private GameObject[] livesFills;
     private int lives = 3;
+    
+    /*
+    SceneControllerScript _sceneControllerScript;
+    public GameObject MainCard;
 
+    void Awake() {
+        _sceneControllerScript = MainCard.GetComponent<SceneControllerScript>();
+    }
+    */
     public int Lives{
         get{
             return lives;

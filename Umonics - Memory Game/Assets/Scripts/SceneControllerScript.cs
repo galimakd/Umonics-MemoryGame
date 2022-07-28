@@ -12,6 +12,13 @@ public class SceneControllerScript : MonoBehaviour
 
     [SerializeField] private MainCardScript originalCard;
     [SerializeField] private Sprite[] images;
+    // Get reduce lives
+    LivesScript _livesScript;
+    [SerializeField] GameObject Lives;
+
+    void Awake() {
+        _livesScript = Lives.GetComponent<LivesScript>();
+    }
 
     private void Start() {
         Vector3 startPos = originalCard.transform.position; // position of first card
@@ -85,7 +92,8 @@ public class SceneControllerScript : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
-            _heart--;
+            _livesScript.ReduceLives();
+            
         }
 
         //so we can reuse
