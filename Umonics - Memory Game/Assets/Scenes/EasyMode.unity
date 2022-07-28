@@ -2248,6 +2248,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 65366b23f80c3d34b88bfdfea83d3239, type: 3}
   Lives: {fileID: 411051492}
   scoreLabel: {fileID: 0}
+  _timer: {fileID: 285931710}
   _gameOver: {fileID: 317628306}
 --- !u!4 &2144447561
 Transform:
