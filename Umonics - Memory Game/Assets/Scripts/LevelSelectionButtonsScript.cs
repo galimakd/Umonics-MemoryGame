@@ -7,6 +7,8 @@ public class LevelSelectionButtonsScript : MonoBehaviour
     [SerializeField] private AudioSource buttonAudioSource;
     [SerializeField] private AudioClip doorKnockClip;
 
+    enum Difficulty{EASY, MEDIUM, HARD}
+
     public void BackClicked(){
 
         Scene scene = SceneManager.GetActiveScene();
@@ -20,33 +22,33 @@ public class LevelSelectionButtonsScript : MonoBehaviour
     }
 
     public void EasyClicked(){
-        StartCoroutine(LoadLevel("Easy"));
+        StartCoroutine(LoadLevel(Difficulty.EASY));
     }
 
     /*
     public void MediumClicked(){
-        StartCoroutine(LoadLevel("Medium"));
+        StartCoroutine(LoadLevel(Difficulty.MEDIUM));
     }
 
      public void HardClicked(){
-        StartCoroutine(LoadLevel("Hard"));
+        StartCoroutine(LoadLevel(Difficulty.HARD));
     }
     */
 
 
-    IEnumerator LoadLevel(string level){
+    IEnumerator LoadLevel(Difficulty difficulty){
         buttonAudioSource.clip = doorKnockClip;
         buttonAudioSource.Play();
         yield return new WaitWhile(() => buttonAudioSource.isPlaying);
 
-        switch(level){
-            case "Easy":
+        switch(difficulty){
+            case Difficulty.EASY:
                 SceneManager.LoadScene("EasyMode");
                 break;
-            case "Medium":
+            case Difficulty.MEDIUM:
                 //SceneManager.LoadScene("MediumMode");
                 break;
-            case "Hard":
+            case Difficulty.HARD:
                 //SceneManager.LoadScene("HardMode");
                 break; 
         }
