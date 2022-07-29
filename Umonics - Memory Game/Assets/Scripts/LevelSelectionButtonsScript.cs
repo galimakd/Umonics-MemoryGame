@@ -2,9 +2,15 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelSelectionButtonsScript : MonoBehaviour
 {
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private AudioSource buttonAudioSource;
+    [SerializeField] private AudioClip doorKnockClip;
+>>>>>>> Stashed changes
 
     public void BackClicked(){
 
@@ -19,20 +25,25 @@ public class LevelSelectionButtonsScript : MonoBehaviour
     }
 
     public void EasyClicked(){
-        LoadLevel("Easy");
+        StartCoroutine(LoadLevel("Easy"));
     }
 
     /*
     public void MediumClicked(){
-        LoadLevel("Medium");
+        StartCoroutine(LoadLevel("Medium"));
     }
 
      public void HardClicked(){
-        LoadLevel("Hard");
+        StartCoroutine(LoadLevel("Hard"));
     }
     */
 
-    private void LoadLevel(string level){
+
+    IEnumerator LoadLevel(string level){
+        buttonAudioSource.clip = doorKnockClip;
+        buttonAudioSource.Play();
+        yield return new WaitWhile(() => buttonAudioSource.isPlaying);
+
         switch(level){
             case "Easy":
                 SceneManager.LoadScene("EasyMode");
@@ -45,6 +56,5 @@ public class LevelSelectionButtonsScript : MonoBehaviour
                 break; 
         }
     }
-
-
+    
 }
