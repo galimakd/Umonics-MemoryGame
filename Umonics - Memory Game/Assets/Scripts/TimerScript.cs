@@ -36,4 +36,10 @@ public class TimerScript : MonoBehaviour
             return string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
+
+    public int TimerInt{
+        get{
+            return (int)Mathf.Floor(timer);
+        }
+    }
 }

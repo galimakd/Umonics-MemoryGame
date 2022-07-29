@@ -1865,6 +1865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24920345df9f9be4092a764cc9cb6c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonAudioSource: {fileID: 0}
+  doorKnockClip: {fileID: 0}
 --- !u!1 &914343870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,7 +5103,7 @@ MonoBehaviour:
   _gameOver: {fileID: 317628306}
   _3stars: {fileID: 914343875}
   _2stars: {fileID: 2967227}
-  _1star: {fileID: 0}
+  _1star: {fileID: 1113306976}
 --- !u!4 &2144447561
 Transform:
   m_ObjectHideFlags: 0

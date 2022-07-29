@@ -132,19 +132,16 @@ public class SceneControllerScript : MonoBehaviour
     
     public void Won() {
         Stop();
-        int.TryParse(_timer.TimerString, out _timeScore);
-
-        if(_timeScore <= 5) {
+        
+        if(_timer.TimerInt <= 15) {
             _3stars.ThreeStars();
             Debug.Log(_timeScore);
-        } else if(_timeScore <=10){
+        } else if(_timer.TimerInt <= 30){
             _2stars.TwoStars();
         } else {
             _1star.OneStar();
         }
         
-        
-        Debug.Log(_timer.TimerString);
     }
     
     
