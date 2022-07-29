@@ -1,16 +1,11 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class LevelSelectionButtonsScript : MonoBehaviour
 {
-<<<<<<< Updated upstream
-=======
     [SerializeField] private AudioSource buttonAudioSource;
     [SerializeField] private AudioClip doorKnockClip;
->>>>>>> Stashed changes
 
     public void BackClicked(){
 
