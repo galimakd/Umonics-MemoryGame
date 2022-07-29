@@ -90,7 +90,7 @@ public class SceneControllerScript : MonoBehaviour
         if(_firstRevealed.id == _secondRevealed.id) {
             _score++;
             if(_score==2){
-                Stop();
+                Won();
             }
         }
         else {
@@ -121,6 +121,31 @@ public class SceneControllerScript : MonoBehaviour
         
         _gameOver.RetryBackground();
         Stop();
+        Debug.Log(_timer.TimerString);
     }
+
+    public ThreeStarsScript _3stars;
+    public TwoStarsScript _2stars;
+    public OneStarScript _1star;
+    
+    private int _timeScore;
+    
+    public void Won() {
+        Stop();
+        int.TryParse(_timer.TimerString, out _timeScore);
+
+        if(_timeScore <= 5) {
+            _3stars.ThreeStars();
+            Debug.Log(_timeScore);
+        } else if(_timeScore <=10){
+            _2stars.TwoStars();
+        } else {
+            _1star.OneStar();
+        }
+        
+        
+        Debug.Log(_timer.TimerString);
+    }
+    
     
 }

@@ -1,10 +1,21 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class LevelSelectionButtonsScript : MonoBehaviour
 {
+
     public void BackClicked(){
-        SceneManager.LoadScene("StartMenu");
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        if(scene.name == "LevelSelection") {
+            SceneManager.LoadScene("StartMenu");
+        }
+        else if(scene.name == "EasyMode"){
+            SceneManager.LoadScene("LevelSelection");
+        }
     }
 
     public void EasyClicked(){
