@@ -118,10 +118,8 @@ public class SceneControllerScript : MonoBehaviour
     public GameOverScript _gameOver;
     
     public void GameOver() {
-        
         _gameOver.RetryBackground();
         Stop();
-        Debug.Log(_timer.TimerString);
     }
 
     public ThreeStarsScript _3stars;
@@ -135,7 +133,6 @@ public class SceneControllerScript : MonoBehaviour
         
         if(_timer.TimerInt <= 15) {
             _3stars.ThreeStars();
-            Debug.Log(_timeScore);
         } else if(_timer.TimerInt <= 30){
             _2stars.TwoStars();
         } else {
