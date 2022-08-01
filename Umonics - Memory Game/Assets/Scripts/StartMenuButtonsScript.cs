@@ -5,6 +5,9 @@ using System.Collections;
 public class StartMenuButtonsScript : MonoBehaviour
 {
 
+    [SerializeField] private AudioSource menuBGMSource;
+    public static float BGMClipTime;
+
     public void Play(AudioSource source){
         StartCoroutine(PlayAction(source));
     }
@@ -24,6 +27,8 @@ public class StartMenuButtonsScript : MonoBehaviour
     private IEnumerator PlayAction(AudioSource source){
         source.Play();
         yield return new WaitForSeconds(.1f);
+
+        BGMClipTime = menuBGMSource.time;
         SceneManager.LoadScene("LevelSelection");
     }
 
