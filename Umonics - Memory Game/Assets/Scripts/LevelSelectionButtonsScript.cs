@@ -39,7 +39,7 @@ public class LevelSelectionButtonsScript : MonoBehaviour
     IEnumerator LoadLevel(Difficulty difficulty){
         buttonAudioSource.clip = doorKnockClip;
         buttonAudioSource.Play();
-        yield return new WaitWhile(() => buttonAudioSource.isPlaying);
+        yield return new WaitForSeconds(.1f);
 
         switch(difficulty){
             case Difficulty.EASY:
