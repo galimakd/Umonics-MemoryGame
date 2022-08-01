@@ -128,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Easy Card 1
+      name: Easy Cards_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1007
-        height: 1407
+        width: 1009
+        height: 1423
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48e5200f312fc8741bd4c5fbb68f8b52
-      internalID: -1654903383
+      spriteID: 58dff0c0b6034314c8b1e7f05f5c4775
+      internalID: -17950191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Easy Card 2
+      name: Easy Cards_1
       rect:
         serializedVersion: 2
-        x: 1253
-        y: 16
-        width: 1006
-        height: 1407
+        x: 1251
+        y: 0
+        width: 1008
+        height: 1423
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78fb1de75a62cfc4d926ecf816e8993e
-      internalID: -2114427426
+      spriteID: 69902c0ad37c8fa458a91b1271d4f45c
+      internalID: 1585445969
       vertices: []
       indices: 
       edges: []
@@ -180,8 +180,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Easy Card 2: -2114427426
-      Easy Card 1: -1654903383
+      Easy Cards_1: 1585445969
+      Easy Cards_0: -17950191
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

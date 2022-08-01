@@ -7,8 +7,8 @@ public class SceneControllerScript : MonoBehaviour
     //2 rows and 2 columns
     public const int gridRows = 2;
     public const int gridColumns = 2;
-    public const float offsetX = 4f;
-    public const float offsetY = 5f;
+    public const float offsetX = 3f;
+    public const float offsetY = 3.5f;
 
     [SerializeField] private MainCardScript originalCard;
     [SerializeField] private Sprite[] images;
