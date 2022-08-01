@@ -86,6 +86,8 @@ public class SceneControllerScript : MonoBehaviour
         }
     }
 
+    [SerializeField] private AudioSource errorAudioSource; // error sound source
+
     private IEnumerator CheckMatch(){
         if(_firstRevealed.id == _secondRevealed.id) {
             _score++;
@@ -99,6 +101,9 @@ public class SceneControllerScript : MonoBehaviour
             _secondRevealed.Unreveal();
             _livesScript.ReduceLives();
             _hearts--;
+ 
+            errorAudioSource.Play(); // error sound
+
             if(_hearts == 0) {
                 GameOver();//Game over on 0 hearts
             }
