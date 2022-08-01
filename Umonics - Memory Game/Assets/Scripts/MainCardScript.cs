@@ -8,12 +8,14 @@ public class MainCardScript : MonoBehaviour
 {
     [SerializeField] private SceneControllerScript controller;
     [SerializeField] private GameObject BackCard;
+    [SerializeField] private AudioSource audioSource;
 
     //Change photo on click
     public void OnMouseDown() {
         if(BackCard.activeSelf && controller.canReveal) {
             BackCard.SetActive(false);
             controller.CardRevealed(this);
+            audioSource.Play();
         }
     }
 
@@ -30,6 +32,7 @@ public class MainCardScript : MonoBehaviour
 
     public void Unreveal() {
         BackCard.SetActive(true); //cover card face again
+        audioSource.Play();
     }
 
 }
