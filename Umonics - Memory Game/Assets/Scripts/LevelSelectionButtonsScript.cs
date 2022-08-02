@@ -6,26 +6,33 @@ public class LevelSelectionButtonsScript : MonoBehaviour
 {
     [SerializeField] private AudioSource buttonAudioSource;
     [SerializeField] private AudioClip doorKnockClip;
-
+    private LevelSelectionDB levelSelectionDB;
+    [SerializeField] private GameObject mediumLock, hardLock;
+    
     enum Difficulty{EASY, MEDIUM, HARD}
 
+
+    private void Start() {
+        levelSelectionDB = LevelSelectionDB.GetInstance();
+
+        // Lock thingy
+        if(levelSelectionDB.LevelUnlocked >= 2){
+            mediumLock.SetActive(false);
+        }
+
+         if(levelSelectionDB.LevelUnlocked == 3){
+            hardLock.SetActive(false);
+        }
+    }
+
     public void BackClicked(){
-
-        Scene scene = SceneManager.GetActiveScene();
-
-        if(scene.name == "LevelSelection") {
-            SceneManager.LoadScene("StartMenu");
-        }
-        else if(scene.name == "EasyMode"){
-            SceneManager.LoadScene("LevelSelection");
-        }
+        SceneManager.LoadScene("StartMenu");    
     }
 
     public void EasyClicked(){
         StartCoroutine(LoadLevel(Difficulty.EASY));
     }
 
-    /*
     public void MediumClicked(){
         StartCoroutine(LoadLevel(Difficulty.MEDIUM));
     }
@@ -33,7 +40,6 @@ public class LevelSelectionButtonsScript : MonoBehaviour
      public void HardClicked(){
         StartCoroutine(LoadLevel(Difficulty.HARD));
     }
-    */
 
 
     IEnumerator LoadLevel(Difficulty difficulty){
@@ -46,10 +52,14 @@ public class LevelSelectionButtonsScript : MonoBehaviour
                 SceneManager.LoadScene("EasyMode");
                 break;
             case Difficulty.MEDIUM:
-                //SceneManager.LoadScene("MediumMode");
+                if(levelSelectionDB.LevelUnlocked >= 2){
+                    //SceneManager.LoadScene("MediumMode");
+                }
                 break;
             case Difficulty.HARD:
-                //SceneManager.LoadScene("HardMode");
+                if(levelSelectionDB.LevelUnlocked >= 3){
+                    //SceneManager.LoadScene("HardMode");
+                }
                 break; 
         }
     }

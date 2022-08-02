@@ -7,6 +7,7 @@ public class LevelSelectionBGM : MonoBehaviour
     void Start()
     {
         mainCameraSource.time = StartMenuButtonsScript.BGMClipTime;
+        StartMenuButtonsScript.BGMClipTime = 0;
         mainCameraSource.Play();
     }
 

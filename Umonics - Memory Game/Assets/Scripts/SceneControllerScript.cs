@@ -132,7 +132,7 @@ public class SceneControllerScript : MonoBehaviour
     public OneStarScript _1star;
     
     private int _timeScore;
-    
+
     public void Won() {
         Stop();
         
@@ -144,6 +144,8 @@ public class SceneControllerScript : MonoBehaviour
             _1star.OneStar();
         }
         
+        // increases level unlocked
+        LevelSelectionDB.GetInstance().LevelUnlockIncrease();
     }
     
     
