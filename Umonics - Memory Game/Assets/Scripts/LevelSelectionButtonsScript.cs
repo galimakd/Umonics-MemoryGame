@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelectionButtonsScript : MonoBehaviour
 {
     [SerializeField] private AudioSource buttonAudioSource;
-    [SerializeField] private AudioClip doorKnockClip;
+    [SerializeField] private AudioClip doorKnockClip, backClip;
     private LevelSelectionDB levelSelectionDB;
     [SerializeField] private GameObject mediumLock, hardLock;
     
@@ -26,7 +26,15 @@ public class LevelSelectionButtonsScript : MonoBehaviour
     }
 
     public void BackClicked(){
-        SceneManager.LoadScene("StartMenu");    
+         StartCoroutine(GoBack());
+    }
+
+    IEnumerator GoBack(){
+        buttonAudioSource.clip = backClip;
+        buttonAudioSource.Play();
+        yield return new WaitForSeconds(.1f);
+
+        SceneManager.LoadScene("StartMenu");   
     }
 
     public void EasyClicked(){
@@ -40,7 +48,6 @@ public class LevelSelectionButtonsScript : MonoBehaviour
      public void HardClicked(){
         StartCoroutine(LoadLevel(Difficulty.HARD));
     }
-
 
     IEnumerator LoadLevel(Difficulty difficulty){
         buttonAudioSource.clip = doorKnockClip;
