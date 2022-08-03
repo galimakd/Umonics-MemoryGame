@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MediumMode.unity
     guid: 807d988f27be0964e8da95efa5a21027
+  - enabled: 1
+    path: Assets/Scenes/HardMode.unity
+    guid: 3fb5c4e96f1c10648b77ff368434e970
   m_configObjects: {}

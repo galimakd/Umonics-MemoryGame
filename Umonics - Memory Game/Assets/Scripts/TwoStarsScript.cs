@@ -11,7 +11,6 @@ public class TwoStarsScript : MonoBehaviour
         gameObject.SetActive(true);
     }
     
-
     public void NextButton() {
         SceneManager.LoadScene("LevelSelection");
     }

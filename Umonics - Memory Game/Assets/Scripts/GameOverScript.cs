@@ -18,6 +18,10 @@ public class GameOverScript : MonoBehaviour
     public void RestartButton2() {
         SceneManager.LoadScene("MediumMode");
     }
+
+    public void RestartButton3() {
+        SceneManager.LoadScene("HardMode");
+    }
     
     public void MainMenuButton() {
         SceneManager.LoadScene("StartMenu");
