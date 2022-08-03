@@ -14,6 +14,10 @@ public class GameOverScript : MonoBehaviour
     public void RestartButton() {
         SceneManager.LoadScene("EasyMode");
     }
+
+    public void RestartButton2() {
+        SceneManager.LoadScene("MediumMode");
+    }
     
     public void MainMenuButton() {
         SceneManager.LoadScene("StartMenu");

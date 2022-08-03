@@ -53,7 +53,7 @@ public class LevelSelectionButtonsScript : MonoBehaviour
                 break;
             case Difficulty.MEDIUM:
                 if(levelSelectionDB.LevelUnlocked >= 2){
-                    //SceneManager.LoadScene("MediumMode");
+                    SceneManager.LoadScene("MediumMode");
                 }
                 break;
             case Difficulty.HARD:
