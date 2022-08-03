@@ -2300,7 +2300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Logos:'
+  m_text: 'Credits:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81df3161d136acd4fbd401f3440b5fee, type: 2}
   m_sharedMaterial: {fileID: 2134936630038213871, guid: 81df3161d136acd4fbd401f3440b5fee, type: 2}
