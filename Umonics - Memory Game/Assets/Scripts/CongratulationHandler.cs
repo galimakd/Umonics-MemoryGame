@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CongratulationHandler : MonoBehaviour
 {
@@ -24,8 +25,12 @@ public class CongratulationHandler : MonoBehaviour
         yield return new WaitForSeconds(.1f);
 
         dialogStart.SetActive(false);
-        
+
         videoPanel.SetActive(true);
         videoItself.SetActive(true);
+    }
+
+    public void BackClicked(){
+        SceneManager.LoadScene("StartMenu");
     }
 }
