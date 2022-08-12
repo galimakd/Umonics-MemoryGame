@@ -1978,7 +1978,7 @@ MonoBehaviour:
   doorKnockClip: {fileID: 8300000, guid: 18e4c482af7584642b13393c59a7a59d, type: 3}
   backClip: {fileID: 8300000, guid: bc71b5cc72853af47ac2d5052fc4721b, type: 3}
   mediumLock: {fileID: 690160896}
-  hardLock: {fileID: 0}
+  hardLock: {fileID: 1069225339}
   mediumAnimator: {fileID: 690160900}
   hardAnimator: {fileID: 1069225341}
 --- !u!82 &2016290149
