@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HardMode.unity
     guid: 3fb5c4e96f1c10648b77ff368434e970
+  - enabled: 1
+    path: Assets/Scenes/Congratulations.unity
+    guid: dbaf49731feaa334e831bf9e915f31e8
   m_configObjects: {}
