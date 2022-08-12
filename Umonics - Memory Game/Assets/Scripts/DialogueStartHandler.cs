@@ -11,7 +11,7 @@ public class DialogueStartHandler : MonoBehaviour
             dialogStart.SetActive(true);
         }
     }
-    
+
     public void CheckClicked(AudioSource source){
         StartCoroutine(CheckCoroutine(source));
     }
