@@ -11,6 +11,10 @@ public class OneStarScript : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void EndButton() {
+        SceneManager.LoadScene("Congratulations");
+    }
+
     public void NextButton() {
         SceneManager.LoadScene("LevelSelection");
     }

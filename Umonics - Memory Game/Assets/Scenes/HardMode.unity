@@ -16361,7 +16361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2059293598}
         m_TargetAssemblyTypeName: OneStarScript, Assembly-CSharp
-        m_MethodName: MainMenuButton
+        m_MethodName: EndButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22345,7 +22345,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1714375500}
         m_TargetAssemblyTypeName: ThreeStarsScript, Assembly-CSharp
-        m_MethodName: MainMenuButton
+        m_MethodName: EndButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23278,7 +23278,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813525526}
         m_TargetAssemblyTypeName: TwoStarsScript, Assembly-CSharp
-        m_MethodName: MainMenuButton
+        m_MethodName: EndButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
